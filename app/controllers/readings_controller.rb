@@ -5,7 +5,7 @@ class ReadingsController < ProtectedController
 
   # GET /readings
   def index
-    @readings = current_user.reading.all
+    @readings = current_user.readings.all
 
     render json: @readings
   end
@@ -17,7 +17,7 @@ class ReadingsController < ProtectedController
 
   # POST /readings
   def create
-    @reading = current_user.reading.new(reading_params)
+    @reading = current_user.readings.new(reading_params)
 
     if @reading.save
       render json: @reading, status: :created, location: @reading
@@ -44,7 +44,7 @@ class ReadingsController < ProtectedController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_reading
-    @reading = current_user.reading.find(params[:id])
+    @reading = current_user.readings.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
