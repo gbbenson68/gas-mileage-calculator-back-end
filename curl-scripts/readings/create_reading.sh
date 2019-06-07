@@ -18,12 +18,6 @@ PRICE=${7}
 PRICEUNIT=${8}
 COMMENT=${9}
 
-echo -n "Enter password: "
-stty -echo
-read OLDPASS
-stty echo
-echo
-
 #echo ${URL}
 #echo ${TOKEN}
 #echo ${USER_ID}
