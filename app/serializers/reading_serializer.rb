@@ -5,6 +5,8 @@ class ReadingSerializer < ActiveModel::Serializer
              :transaction_date,
              :odometer_reading,
              :odometer_units,
+             :fuel_amount,
+             :fuel_units,
              :price,
              :price_units,
              :comment
