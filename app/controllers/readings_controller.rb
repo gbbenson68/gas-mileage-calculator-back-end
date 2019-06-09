@@ -52,6 +52,8 @@ class ReadingsController < ProtectedController
     params.require(:reading).permit(:transaction_date,
                                     :odometer_reading,
                                     :odometer_units,
+                                    :fuel_amount,
+                                    :fuel_units,
                                     :price,
                                     :price_units,
                                     :comment,

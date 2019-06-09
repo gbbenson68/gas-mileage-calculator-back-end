@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_07_174640) do
+ActiveRecord::Schema.define(version: 2019_06_09_184341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2019_06_07_174640) do
     t.datetime "updated_at", null: false
     t.string "odometer_units", null: false
     t.string "price_units"
+    t.integer "fuel_amount", null: false
+    t.string "fuel_units", null: false
     t.index ["user_id"], name: "index_readings_on_user_id"
   end
 

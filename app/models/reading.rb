@@ -5,6 +5,8 @@ class Reading < ApplicationRecord
   validates :transaction_date,
             :odometer_reading,
             :odometer_units,
+            :fuel_amount,
+            :fuel_units,
             :user_id,
             presence: true
 end
