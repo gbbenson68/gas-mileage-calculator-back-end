@@ -5,7 +5,7 @@ class ReadingsController < ProtectedController
 
   # GET /readings
   def index
-    @readings = current_user.readings.all
+    @readings = current_user.readings.all.order(:transaction_date)
 
     render json: @readings
   end
