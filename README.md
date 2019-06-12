@@ -12,11 +12,21 @@ the amount of gas they purchased at their last fill up, and, optionally, the amo
 of the purchase. The app then calculates the average mileage and average cost, per
 gallon.
 
+##### What It Does
+This application calculates a running average of the mileage for a given user. For every trip to the gas station, simply record the date, your odometer reading on that date, the amount of gas you purchased, and what you paid for it. Over the course of time, the MPG (miles per gallon) and PPG (price per gallon) should be a fairly accurate average of the mileage your vehicle gets on a regular basis.
+
+As it's a running total, you can add older entries, as well. If the data that you enter is correct, then older forgotten entries will only act to make your MPG and PPG calculations more accurate.
+
+##### What To Expect
+* For calculations to begin, you need at least two entries. The reason for this is that, even after the first entry, there is no effective distance driven. (Did you drive 500 miles before the first entry or 5000 miles? How much gas did you actually purchase before the first entry?)
+
+* The Total Fuel amount reflects what has been purchased _in total_, whereas the MPG and PPG calculations do _not_ take the fuel for the most recent entry into account, as there's no way of knowing how far you will drive on your _current_ tank of gas until you add yet another entry.
+
 For notes about the Client, please see the README [here](https://github.com/gbbenson68/gas-mileage-calculator-client).
 
 Technologies Used
 -----------------
-The web application back end was written utilizing and with the help of the following technologies:
+The web application back end was written with the help of and utilizing the following technologies:
 * Ruby
 * Rails
 * PostgreSQL
@@ -64,6 +74,20 @@ db/migrate
 
 Known Bugs and To-dos
 ---------------------
+_Feel free to contact me at guy dot b dot benson at gmail dot com if you've found a bug, or have a suggestion about functionality. Please include an appropriate subject so I don't think that it's spam!_
+
+#### Known Bugs
+* There are no bugs on the Back End, as far as I'm aware.
+
+#### To-Dos
+* I18N and L10N: The current model contains the ability to store different values (liters vs. gallons, kilometers vs. miles, etc.). The front-end is currently hard-coded to Imperial units, as exposing these fields would require the proper checking to ensure that all entries fit a certain profile (see below).
+
+* I have plans to extend the functionality to include user profiles, which would be used by multi-vehicle entities, and which could be locale-specific (liters/kilometers/euros, for example). This would also require extensive changes to the client to allow for this functionality. A basic ERD for this is as below:
+
+![Imgur](https://i.imgur.com/e6hnpXh.png)
+
+
+* _Please check the experimental branch for the latest goings-on!_
 
 About Me
 --------
